@@ -1,0 +1,379 @@
+/* 
+    Created on : 22.3.2015
+    Author     : Sara Skutova, xskuto00, xskuto00@stud.fit.vutbr.cz
+*/
+/*Problem s Firefoxem, kdyz se stranka zmensi (CTRL + mys), tak na nejmensi velikosti
+  Firefox odmitne zobrazovat obrazky ktere maji 1px vysku/sirku a tim se zlikviduje
+  pozadi ktere se temito obrazky vyplnuji*/
+/*Tohle jsem musela udelat, byl tam problem kdyz mezi zacatkem stranky
+  a mezi zacatkem body byla nejaka mezera....nevim proc tam byla*/
+*{
+    margin-top: 0px;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+/*BODY*/
+#itwp1{
+    background-color: #D4D4D4; /*ta seda barva*/
+    font-family: Arial, sans-serif;
+    font-size: 11pt;
+    width: auto;
+    height: auto;
+    margin: 0px;
+    color: black;
+}
+
+/*CELA STRANKA*/
+#page{
+    max-width: 1024px;
+    min-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*HLAVICKA*/
+#header{
+    background-image: url('images/head.png');
+    background-repeat: no-repeat;
+    height: 120px;
+}
+/*Vnitrek hlavicky*/
+#header .inner{
+    height: 120px;
+    margin-left: 30px;
+    margin-right: 50px;
+}
+/*Text v logu*/
+#header .inner h1 span{
+    display: none; 
+}
+/*Hlavni nadpis, je tam odkaz + ten obrazek + tekst*/
+#header .inner h1{
+    float: left;
+    margin-bottom: 0px;
+    padding-top: 15px;
+}
+/*Misto textu obrazek*/
+#header .inner h1 a{
+    display: inline-block;
+    width: 188px;
+    height: 71px;
+    background-image: url('images/logo.png');
+}
+/*Text ktery nechceme zobrazovat*/
+#topmenu .hidden {
+    display: none;
+}
+
+/*ten login*/
+#topmenu{
+    text-align: right;
+    padding-top: 15px;
+    margin-bottom: 5px;
+}
+.login{
+    background: url('images/loginlink.png') no-repeat right;
+    padding-right: 10px;
+}
+
+/*ten sitemap*/
+#sitemap{
+    background: url('images/loginlink.png') no-repeat right;
+    padding-right: 10px;
+    margin: 5px 0px;
+    float: right;   
+}
+
+/*ikonky napravo*/
+#social{
+    padding-right: 20px;
+    float: right;
+    margin-top: 5px;
+}
+#social span{
+    display: none;
+}
+#social .twitter{
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    background-image: url('images/i_twitter.png');
+    margin-right: 3px;
+}
+#social .fb{
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    background-image: url('images/i_fb.png');
+    margin-right: 3px;
+}
+#social .linkedin{
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    background-image: url('images/i_linkedin.png');   
+}
+
+
+
+/*zbavit se te cary*/
+#topmenu hr{
+    display: none;
+}
+
+/*Odkazy nejsou podtrzene*/
+#header a{
+    text-decoration: none;
+    color: black;
+}
+
+/*PRACE S MENU*/
+#menubar{
+    clear: both;
+}
+/*styl seznamu*/
+ul#menu{
+    list-style-type: none;
+    text-align: right;
+    margin: 0px;
+    padding: 0px;
+}
+/*blokove menu na radkove*/
+ul#menu li{
+    display: inline;
+    border-left: 1px solid black;
+    padding: 0px 10px;
+}
+/*Prvek menu, ktery je oznaceny*/
+ul#menu li.selected{
+    font-weight: bold;
+    border: 0px;
+    background: url('images/sel.png') no-repeat center;
+    padding-bottom: 31px;
+}
+
+/*************************BIG OBRAZEK*********************/
+
+/*Ten velky obrazek*/
+#topimg{
+    background-image: url('images/topimg.jpg');
+    background-repeat: no-repeat;
+    background-position: left;
+    height: 350px;
+}
+
+/*Napozicovat ten sedo-prusvitny obrazek*/
+#topimg .inner{
+    float: right;
+    margin-top: 200px;
+    margin-right: 50px;
+}
+
+/*sedo-prusvitny obrazek*/
+#topimg .inner .cont{
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
+    text-shadow: 1px 1px 0px #666;
+    padding: 10px;
+    font-size: 20px;
+}
+#topimg .inner .cont h2{
+    margin: 0px;
+    font-weight: normal;
+}
+#topimg .inner .cont p{
+    margin: 0px;
+    margin-bottom: 5px;
+}
+
+#topimg .inner .cont p.more{
+    background: url('images/moreb.png') no-repeat right;
+    text-align: right;
+    padding-right: 15px;
+}
+#topimg .inner .cont p.more a{
+    color: white;
+    text-shadow: 1px 1px 0px #666;
+    text-decoration: none;
+    font-weight: bold;
+    vertical-align: central;
+}
+#topimg .inner .cont p.more a:hover{
+    text-decoration: underline;
+}
+
+/*****************FEEDBACK********************/
+#feedback{
+    background-image: url('images/bgfback.png');
+    background-repeat: repeat-x;
+    height: 24px;
+}
+/*modrej feedback*/
+#feedback #fpopup{
+    background: url('images/feedback_up.png') no-repeat right;
+    height: 32px;
+    width: 225px;
+    float: right;
+    position: relative;
+    bottom: 8px;
+    
+}
+/*stred feedbacku, slovo feedback*/
+#feedback #fpopup .inner{
+   text-align: right;
+   height: 100%;
+   position: relative;
+   top: 13px;
+}
+#feedback #fpopup .inner a{
+    color: white;
+    margin-right: 100px;
+}
+
+/************HLAVNI CAST****************/
+/*Pry to css3 podporuje....ono to vazne funguje :D */
+#contentbox{
+    background-image: url('images/bgcont.jpg'), url('images/bgcont2.jpg');
+    background-repeat: no-repeat, repeat;
+    background-position: bottom, top;
+    overflow: visible;
+    
+}
+.bg{
+   overflow: visible; 
+}
+
+#content{
+    margin: 0px 50px 0px 30px;
+    padding: 30px 0px;
+    overflow: visible;
+}
+
+.maintext{
+    overflow: hidden;
+}
+
+.col{
+    float: left;
+}
+
+/*magicka cisla, ktera funguji*/
+#news{
+    max-width: 600px;
+    margin-right: 30px;
+}
+
+#news a{
+    text-decoration: underline;
+    font-size: 20px;
+    font-weight: normal;
+}
+#news h4{
+    margin: 0px;
+    padding: 0px;
+}
+
+#news p:first-of-type{
+    border-bottom: 1px grey solid;
+    padding-bottom: 15px;
+}
+
+.abox{
+    border-top: 1px gray solid;
+    padding-top: 30px;
+    margin-bottom: 10px;
+    width: 300px;
+}
+
+.abox a{
+    background: url('images/thumb_didyou.png') no-repeat;
+    display: block;
+    width: 260px;
+    height: 189px;
+    color: white;
+    font-size: 14px;
+    padding: 0px 10px;
+    overflow: hidden;
+}
+
+.abox a span.link{
+    display: block;
+    height: 30px;
+    background: url('images/mores.png') no-repeat right;
+    text-align: right;
+    padding-right: 15px;
+    line-height: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    
+}
+
+.abox a q{
+    quotes: none;
+    display: block;
+    text-indent: 20px;
+    background: url('images/quotl.png') no-repeat left top;
+}
+
+.abox a q::after{
+    content: url('images/quotr.png');
+    padding-left: 5px;
+}
+
+.abox a span.sgn{
+    float: right;
+    margin-top: 10px;
+    font-weight: bold;
+}
+/*******************PATICKA*************************/
+#footer{
+    clear: both;
+    background: url('images/bgfootfull.jpg') no-repeat;
+    height: 19px;
+}
+#footer .inner{
+    margin-left: 30px;
+    margin-right: 50px;
+}
+
+#footer hr{
+    display: none;
+}
+
+#footer .inner ul.menu{
+    list-style-type: none;
+    text-align: left;
+    margin: 0px;
+    padding: 0px;
+    float: left;
+}
+
+#footer .inner ul.menu li{
+    display: inline;
+    font-size: 11px;
+    vertical-align: central;
+    padding: 0px 5px;
+    border-left: 1px gray solid;
+}
+
+#footer .inner ul.menu li:first-child{
+    border: 0px;
+}
+
+#footer .inner ul.menu li a{
+    color: white;
+    text-shadow: 1px 1px 0px #666;
+}
+
+#footer .inner .copy{
+    color: white;
+    text-shadow: 1px 1px 0px #666;
+    text-align: right;
+    font-size: 11px;
+    padding-top: 4px;
+}
+
